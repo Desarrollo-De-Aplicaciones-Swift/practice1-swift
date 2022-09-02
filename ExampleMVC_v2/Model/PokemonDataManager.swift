@@ -20,18 +20,18 @@ class PokemonDataManager{
         }
         return [[:]]
     }
-    /*
+    
     func pokemonCount() -> Int {
         return pokemons.count
     }
     func pokemonAtIndex (index: Int) -> Pokemon {
         return pokemons[index]
-    }*/
+    }
     
     func fetch() {
         for pokemonInfo in loadData(){
             print(pokemonInfo)
-            //pokemons.append(Pokemon.init(dict: pokemonInfo))
+            pokemons.append(Pokemon.init(dict: pokemonInfo))
         }
     }
 }
