@@ -14,10 +14,9 @@ class PokemonViewController: UIViewController, UICollectionViewDataSource, UICol
     let manager = PokemonDataManager()
     
     @IBOutlet var PokemonCollectionView: UICollectionView!
-    /*
+    
     var selectPokemon : Pokemon?
     
-    */
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,12 +35,16 @@ class PokemonViewController: UIViewController, UICollectionViewDataSource, UICol
         cell.pokemonImageView.image = UIImage.init(named: pokemon.image)
         cell.pokemonLabel.text = pokemon.name
         return cell
-    }    /*
+    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectPokemon = manager.pokemonAtIndex(index: indexPath.row)
         //print(selectPokemon)
-        
         self.performSegue(withIdentifier: "PokemonDetailSegue", sender: Self.self)
-    }*/
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! PokemonDetailViewController
+        destination.recivedPokemon = selectPokemon
+    }
 }
