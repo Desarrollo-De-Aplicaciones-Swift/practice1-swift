@@ -66,9 +66,25 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zR7-sf-iyx">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="HeaderReusableView" id="zR7-sf-iyx" customClass="HeaderCollectionReusableView" customModule="ExampleMVC_v2" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKC-S0-KT9">
+                                            <rect key="frame" x="38" y="23" width="299" height="36"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="zKC-S0-KT9" firstAttribute="top" secondItem="zR7-sf-iyx" secondAttribute="topMargin" constant="15" id="1xj-Yd-ngO"/>
+                                        <constraint firstItem="zKC-S0-KT9" firstAttribute="leading" secondItem="zR7-sf-iyx" secondAttribute="leadingMargin" constant="30" id="biD-jX-iJw"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="zKC-S0-KT9" secondAttribute="trailing" constant="30" id="wai-wS-M7I"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="zKC-S0-KT9" id="jX9-TP-ees"/>
+                                    </connections>
                                 </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="ins-dP-51e"/>
