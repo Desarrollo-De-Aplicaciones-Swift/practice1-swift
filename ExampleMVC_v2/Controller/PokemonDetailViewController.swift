@@ -17,6 +17,8 @@ class PokemonDetailViewController: UIViewController {
     @IBOutlet var habilityPokemonLabel: UILabel!
     @IBOutlet var weightPokemonLabel: UILabel!
     
+    @IBOutlet var backButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,5 +31,8 @@ class PokemonDetailViewController: UIViewController {
         
     }
     
-
+    @IBAction func goBackButton(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
