@@ -39,7 +39,6 @@ class PokemonViewController: UIViewController, UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectPokemon = manager.pokemonAtIndex(index: indexPath.row)
-        //print(selectPokemon)
         self.performSegue(withIdentifier: "PokemonDetailSegue", sender: Self.self)
     }
     
