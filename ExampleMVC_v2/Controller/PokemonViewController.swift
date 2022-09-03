@@ -46,8 +46,8 @@ class PokemonViewController: UIViewController, UICollectionViewDataSource, UICol
         switch kind {
             case UICollectionView.elementKindSectionHeader:
                 if let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HeaderReusableView", for: indexPath) as? HeaderCollectionReusableView {
-                        header.titleLabel.text = "Pokemon"
-                        return header
+                    header.imageHeader.image = UIImage.init(named: "pokemon")
+                    return header
                     }
             default:
                 return UICollectionReusableView()

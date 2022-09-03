@@ -9,5 +9,5 @@ import UIKit
 
 class HeaderCollectionReusableView: UICollectionReusableView {
         
-    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var imageHeader: UIImageView!
 }
